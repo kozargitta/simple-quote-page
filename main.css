@@ -1,10 +1,19 @@
-html,
+/*GENERAL STYLES*/
+
+/*box modellre váltás*/
+* {
+  box-sizing: border-box;
+}
+
+/*egyirányú margin deklaráció*/
 body {
     margin: 0;
-    padding: ;
+    padding: 0;
     font-size: 100%;
     line-height: 1.5;
 }
+
+/*gyakori box-modell tulajdonságok definiálása, háttér beállítása*/
 
 body {
     width: 100%;
@@ -14,21 +23,50 @@ body {
     color: #333;
 }
 
+/*MOBILE-FIRST view*/
+
+/*box formázása*/
+
 .wrapper {
     padding-top: 4rem;
-    width: 90%;
+    width: 60%;
     margin: 0 auto;
     text-align: center;
 }
 
+/*boxon belüli elemek formázása*/
 .quote {
   font-family: 'Julius Sans One', sans-serif;
-  font-size: 2.5rem; 
+  font-size: .9rem; 
    
 }
 
 .author {
     font-family: 'Crimson Text', serif;
-    font-size: 1.5rem;
+    font-size: .5rem;
     font-style: italic
+}
+
+/*optimalizálás nagyobb képernyőre*/
+        
+@media /*screen only and-ezt is bele lehet tenni!*/ (min-width: 620px) {
+    
+    .quote {
+        font-size: 2.2rem;
+    }
+    
+    }
+    
+@media /*screen only and-ezt is bele lehet tenni!*/ (min-width: 620px) {
+    .author {
+        font-size: 1.5rem;
+    } 
+    }
+
+@media /*screen only and-ezt is bele lehet tenni!*/ (min-width: 1800px) {
+    .quote{
+        margin-top: 10rem;
+      
+    }
+    
 }
